@@ -49,6 +49,15 @@ class _MyCustomFormState extends State<MyCustomForm> {
               return null;
             },
           ),
+          TextFormField(
+            decoration: const InputDecoration(
+                icon: Icon(Icons.phone),
+                hintText: 'Please Enter A Phone Number',
+                labelText: 'Phone Number'),
+          ),
+          TextFormField(
+            decoration: const InputDecoration(icon: Icon(Icons.calendar_today)),
+          ),
           ElevatedButton(
             onPressed: () {
               if (_formKey.currentState!.validate()) {
