@@ -49,6 +49,16 @@ class _MyCustomFormState extends State<MyCustomForm> {
               return null;
             },
           ),
+          ElevatedButton(
+            onPressed: () {
+              if (_formKey.currentState!.validate()) {
+                ScaffoldMessenger.of(context).showSnackBar(
+                  const SnackBar(content: Text('Processing Data')),
+                );
+              }
+            },
+            child: const Text('Submit'),
+          ),
         ],
       ),
     );
